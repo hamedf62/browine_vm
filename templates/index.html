@@ -1,0 +1,22 @@
+<form action="/contract" method="post">
+  <!-- <label>Contract Address:</label>
+    <input type="text" name="contractAddress"><br><br>
+
+    <label>Gas:</label>
+    <input type="number" name="gas"><br><br>
+    <label>Gas Price:</label>
+    <input type="number" name="gasPrice"><br><br> -->
+  <select name="account" id="account">
+    {% for item in accounts %}
+    <option value="{{item}}">{{item}}</option>
+    {% endfor %}
+  </select><br><br>
+
+  <label>Private Key:</label>
+  <input name="private_key" value="0xbd77ce92c735f1e980909421d21a13d76f7021580d53d4a416510630178fa2ff"><br><br>
+
+  <label>Amount:</label>
+  <input type="number" name="amount"><br><br>
+
+  <button type="submit">Send Transaction</button>
+</form>
